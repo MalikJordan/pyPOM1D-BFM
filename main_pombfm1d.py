@@ -209,5 +209,5 @@ for i in range(0,pom_bfm_parameters.iterations_needed):
         d3state, d3stateb, d3ave = pom_bfm_1d(i, vertical_grid, t, diffusion, nutrients, bfm_phys_vars, d3state, d3stateb, d3ave, include, species)    
 
 # Write Outputs
-np.savez('/model_data' + model_name + '.npz',conc_day=d3ave.daily_ave,conc_month=d3ave.monthly_ave)
+np.savez(model_name + '.npz',conc_day=d3ave.daily_ave,conc_month=d3ave.monthly_ave)
 print('Main done')
