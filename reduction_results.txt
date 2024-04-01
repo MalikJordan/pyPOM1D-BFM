@@ -1,0 +1,518 @@
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_1
+INFO:root:Error function: <function calc_error_lo_1 at 0x7fded185d750>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1l', 'P2l', 'P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:3.00e-04  |        34         | 0.11941
+INFO:root:9.11e-04  |        34         | 0.11941
+INFO:root:9.11e-04  |        33         | 21.92924
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_2
+INFO:root:Error function: <function calc_error_lo_2 at 0x7fd1f2326e60>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P2l', 'P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:3.00e-04  |        34         | 0.39999
+INFO:root:9.11e-04  |        34         | 0.39999
+INFO:root:9.11e-04  |        33         | 14.45772
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_3
+INFO:root:Error function: <function calc_error_lo_3 at 0x7fd9e1a33760>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.44369
+INFO:root:9.10e-04  |        34         | 0.44369
+INFO:root:9.20e-04  |        33         | 10.32964
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_4
+INFO:root:Error function: <function calc_error_lo_4 at 0x7fc9f140b7f0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1l', 'P2l', 'P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.00837
+INFO:root:9.10e-04  |        34         | 0.00837
+INFO:root:9.20e-04  |        33         | 5.02676
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_5
+INFO:root:Error function: <function calc_error_lo_5 at 0x7fd711b63880>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P2l', 'P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.00778
+INFO:root:9.10e-04  |        34         | 0.00778
+INFO:root:9.20e-04  |        33         | 5.02738
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_6
+INFO:root:Error function: <function calc_error_lo_6 at 0x7fa46990b910>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P3l', 'P4l']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.16921
+INFO:root:9.10e-04  |        34         | 0.16921
+INFO:root:9.20e-04  |        33         | 18.13041
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_7
+INFO:root:Error function: <function calc_error_lo_7 at 0x7f90f949b9a0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1c', 'P2c', 'P3c', 'P4c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.13813
+INFO:root:9.10e-04  |        34         | 0.13813
+INFO:root:9.20e-04  |        33         | 6.79539
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_8
+INFO:root:Error function: <function calc_error_lo_8 at 0x7f7ef09ffa30>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1c', 'P2c', 'P3c', 'P4c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.03172
+INFO:root:9.10e-04  |        34         | 0.03172
+INFO:root:9.20e-04  |        33         | 22.53790
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: lo_9
+INFO:root:Error function: <function calc_error_lo_9 at 0x7fe291473ac0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1c', 'P2c', 'P3c', 'P4c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 0.00332
+INFO:root:1.08e-02  |        32         | 1.35006
+INFO:root:1.09e-02  |        32         | 1.35006
+INFO:root:1.09e-02  |        31         | 99.89556
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5p': 35, 'Z6c': 36, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z5n': 34, 'Z6n': 37, 'Z6p': 38, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: dic_1
+INFO:root:Error function: <function calc_error_dic_1 at 0x7f8028e33b50>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O3c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-05  |        36         | 0.12410
+INFO:root:1.97e-04  |        36         | 0.12410
+INFO:root:1.98e-04  |        35         | 68.39074
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46, 'O3c': 48}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: dic_2
+INFO:root:Error function: <function calc_error_dic_2 at 0x7f81f1863be0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O3c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-05  |        36         | 0.10571
+INFO:root:1.97e-04  |        36         | 0.10571
+INFO:root:1.98e-04  |        35         | 64.83535
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46, 'O3c': 48}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: dic_3
+INFO:root:Error function: <function calc_error_dic_3 at 0x7ff3a143bc70>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O3c']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-05  |        36         | 0.11731
+INFO:root:1.97e-04  |        36         | 0.11731
+INFO:root:1.98e-04  |        35         | 57.29231
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46, 'O3c': 48}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: dic_4
+INFO:root:Error function: <function calc_error_dic_4 at 0x7f8440663d00>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O3c']
+INFO:root:Retained species: ['N3n', 'N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        35         | 0.01333
+INFO:root:1.13e-03  |        35         | 0.01333
+INFO:root:1.14e-03  |        33         | 0.06728
+INFO:root:1.39e-03  |        33         | 0.06728
+INFO:root:1.40e-03  |        31         | 0.06736
+INFO:root:1.72e-03  |        31         | 0.06736
+INFO:root:1.73e-03  |        28         | 0.06774
+INFO:root:3.95e-03  |        28         | 0.06774
+INFO:root:3.96e-03  |        27         | 0.06751
+INFO:root:4.84e-03  |        27         | 0.06751
+INFO:root:4.85e-03  |        26         | 0.06782
+INFO:root:8.15e-03  |        26         | 0.06782
+INFO:root:8.16e-03  |        25         | 0.06988
+INFO:root:2.46e-02  |        25         | 0.06988
+INFO:root:2.46e-02  |        24         | 0.06715
+INFO:root:2.87e-02  |        24         | 0.06715
+INFO:root:2.87e-02  |        23         | 0.06900
+INFO:root:3.00e-02  |        23         | 0.06900
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3l': 22, 'P4l': 26, 'Z5c': 33, 'Z5p': 35, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46, 'O3c': 48}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1s': 14, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z5n': 34, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: pon_1
+INFO:root:Error function: <function calc_error_pon_1 at 0x7fe3f9813d90>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-05  |        35         | 0.10500
+INFO:root:3.47e-04  |        35         | 0.10500
+INFO:root:3.48e-04  |        34         | 6.11844
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: pon_2
+INFO:root:Error function: <function calc_error_pon_2 at 0x7faa015a7e20>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-05  |        35         | 0.03558
+INFO:root:3.47e-04  |        35         | 0.03558
+INFO:root:3.48e-04  |        34         | 5.51956
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: pon_3
+INFO:root:Error function: <function calc_error_pon_3 at 0x7fc10894feb0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:9.00e-04  |        34         | 4.88983
+INFO:root:1.08e-02  |        34         | 4.88983
+INFO:root:1.08e-02  |        33         | 15.77128
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: oxy_1
+INFO:root:Error function: <function calc_error_oxy_1 at 0x7fbdc8e8b910>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O2o']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:1.50e-05  |        35         | 0.08150
+INFO:root:4.80e-05  |        35         | 0.08150
+INFO:root:4.90e-05  |        34         | 5.75473
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: oxy_2
+INFO:root:Error function: <function calc_error_oxy_2 at 0x7f87891539a0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O2o']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:1.50e-05  |        35         | 0.10771
+INFO:root:4.80e-05  |        35         | 0.10771
+INFO:root:4.90e-05  |        34         | 8.38296
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: oxy_3
+INFO:root:Error function: <function calc_error_oxy_3 at 0x7fcd30e7ba30>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O2o']
+INFO:root:Retained species: []
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:1.50e-04  |        28         | 0.10083
+INFO:root:2.80e-04  |        28         | 0.10083
+INFO:root:2.90e-04  |        26         | 0.10083
+INFO:root:3.40e-04  |        26         | 0.10083
+INFO:root:3.50e-04  |        24         | 0.10083
+INFO:root:4.20e-04  |        24         | 0.10083
+INFO:root:4.30e-04  |        21         | 0.10083
+INFO:root:9.70e-04  |        21         | 0.10083
+INFO:root:9.80e-04  |        20         | 0.10083
+INFO:root:1.20e-03  |        20         | 0.10083
+INFO:root:1.21e-03  |        19         | 0.10083
+INFO:root:2.02e-03  |        19         | 0.10083
+INFO:root:2.03e-03  |        18         | 0.10083
+INFO:root:6.09e-03  |        18         | 0.10083
+INFO:root:6.10e-03  |        17         | 0.10083
+INFO:root:7.11e-03  |        17         | 0.10083
+INFO:root:7.12e-03  |        16         | 0.10083
+INFO:root:1.23e-02  |        16         | 0.10083
+INFO:root:1.23e-02  |        13         | 0.10083
+INFO:root:2.41e-02  |        13         | 0.10083
+INFO:root:2.41e-02  |        12         | 0.12272
+INFO:root:2.52e-02  |        12         | 0.12272
+INFO:root:2.52e-02  |        10         | 0.12272
+INFO:root:5.96e-02  |        10         | 0.12272
+INFO:root:5.96e-02  |         8         | 0.12272
+INFO:root:6.50e-02  |         8         | 0.12272
+INFO:root:6.50e-02  |         7         | 0.12272
+INFO:root:2.32e-01  |         7         | 0.12272
+INFO:root:2.32e-01  |         3         | 0.12272
+INFO:root:2.48e-01  |         3         | 0.12272
+INFO:root:2.48e-01  |         1         | 0.12272
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0}
+INFO:root:Removed species: {'N1p': 1, 'N3n': 2, 'N4n': 3, 'O4n': 4, 'N5s': 5, 'N6r': 6, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P1s': 14, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R2c': 42, 'R3c': 43, 'R6c': 44, 'R6n': 45, 'R6p': 46, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: oxy_4
+INFO:root:Error function: <function calc_error_oxy_4 at 0x7fe879270160>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['O2o']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:9.00e-07  |        35         | 0.00000
+INFO:root:4.89e-05  |        35         | 0.00000
+INFO:root:4.89e-05  |        34         | 32.84171
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: in_1
+INFO:root:Error function: <function calc_error_in_1 at 0x7fdcb0f2fb50>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['N1p']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:1.50e-04  |        35         | 0.24950
+INFO:root:3.30e-04  |        34         | 0.20109
+INFO:root:3.40e-04  |        33         | 159.73975
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: in_2
+INFO:root:Error function: <function calc_error_in_2 at 0x7ff5e03bfbe0>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['N1p']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:1.50e-04  |        35         | 0.25056
+INFO:root:2.50e-04  |        34         | 0.10148
+INFO:root:3.30e-04  |        34         | 0.10148
+INFO:root:3.40e-04  |        33         | 76.59061
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: in_3
+INFO:root:Error function: <function calc_error_in_3 at 0x7f9ee0e93c70>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['N3n']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:1.50e-06  |        34         | 0.00000
+INFO:root:4.00e-05  |        34         | 0.00000
+INFO:root:4.01e-05  |        33         | 92.62848
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
+
+INFO:root:----------------------------------------------------------------------------------------------------
+INFO:root:Scenario: in_4
+INFO:root:Error function: <function calc_error_in_4 at 0x7f78915dfd00>
+INFO:root:Error limit: 5
+INFO:root:Target species: ['N3n']
+INFO:root:Retained species: ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+INFO:root:Beginning reduction loop
+INFO:root:---------------------------------------------
+INFO:root:Threshold | Number of species | Max error (%)
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:Threshold value too high, reducing by factor of 10
+INFO:root:1.50e-06  |        34         | 0.00000
+INFO:root:4.00e-05  |        34         | 0.00000
+INFO:root:4.01e-05  |        33         | 90.00398
+INFO:root:---------------------------------------------
+INFO:root:New method reduction complete.
+INFO:root:Remaining species: {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 'B1c': 7, 'B1n': 8, 'B1p': 9, 'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 'Z6c': 36, 'Z6p': 38, 'R1c': 39, 'R1n': 40, 'R1p': 41, 'R6c': 44, 'R6n': 45, 'R6p': 46}
+INFO:root:Removed species: {'O4n': 4, 'N5s': 5, 'N6r': 6, 'P1s': 14, 'Z3c': 27, 'Z3n': 28, 'Z3p': 29, 'Z4c': 30, 'Z4n': 31, 'Z4p': 32, 'Z6n': 37, 'R2c': 42, 'R3c': 43, 'R6s': 47, 'O3c': 48, 'O3h': 49}
+INFO:root:----------------------------------------------------------------------------------------------------
