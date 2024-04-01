@@ -79,19 +79,53 @@ def calc_percent_error(new_matrix,old_matrix,num_species,num_boxes):
 
 
 def modified_DRGEP(conc,bfm_phys_vars):
-    
+    """
+    Description: Apply Modififed DRGEP reduction strategy to BFM.
+                 Target and safe species for each error function listed below.
+    --------------------------------------------------------------------------------------------------------------
+    Error Function  |   Target Species                          |   Safe Species
+    --------------------------------------------------------------------------------------------------------------
+    lo_1            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_2            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_3            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_4            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_5            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_6            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_7            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_8            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    lo_9            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    --------------------------------------------------------------------------------------------------------------
+    dic_1           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    dic_2           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    dic_3           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    dic_4           |   ['O3c']                                 |   ['N3n', 'N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    --------------------------------------------------------------------------------------------------------------
+    pon_1           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    pon_2           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    pon_3           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    --------------------------------------------------------------------------------------------------------------
+    oxy_1           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    oxy_2           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    oxy_3           |   ['O2o']                                 |   []
+    oxy_4           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    --------------------------------------------------------------------------------------------------------------
+    in_1            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    in_2            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    in_3            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    in_4            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    --------------------------------------------------------------------------------------------------------------
+    """
     # Information for reduction
     # User needs to update these values
-    scenario = 'dic_4'
-    species_targets = ['O3c']
-    species_safe = ['N1p', 'N3n', 'N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    scenario = 'lo_1'
+    species_targets = ['P1l', 'P2l', 'P3l', 'P4l']
+    species_safe = ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     error_limit = 5
-    error_fcn = error_fcns.calc_error_dic_4
+    error_fcn = error_fcns.calc_error_lo_1
     rate_eqn_fcn = reduced_bfm50_rate_eqns
 
     # Time span for integration
-    t_span = [0,86400*365*4]
-    # t_span = [0,86400*365*7]
+    t_span = [0,86400*365*7]
 
     # Time at which the DIC values are obtained
     t = 86400*365
@@ -192,7 +226,7 @@ def run_modified_DRGEP(overall_interaction_coeffs, error_limit, error_fcn, speci
 
     first = True
     error_current = 0.0
-    threshold = 9.1e-4 # 3e-2
+    threshold = 3e-2
     threshold_increment = 1e-5
     threshold_multiplier = 2
     while error_current <= error_limit:
@@ -228,8 +262,9 @@ def run_modified_DRGEP(overall_interaction_coeffs, error_limit, error_fcn, speci
         if num_species <= 1:
             break
 
-        # Stop interating if threshold exceeds 1
+        # Stop interating if threshold exceeds value
         if threshold >= 3e-2:
+        # if threshold >= 1:  # maximum threshold for oxy_3 error function
             break
 
     if error_current > error_limit:
