@@ -112,7 +112,7 @@ def phyto_sedimentation():
     """
     # From namelists_bfm
     # p_rPIm        [m/d]   phytoplanktom background sinking rate
-    # p_burvel_PI   [m/d]   Botttom burial velocity for detritus
+    # p_burvel_PI   [m/d]   Botttom burial velocity for plankton
     p_rPIm = [0.0, 0.0, 0.0, 0.0]
     p_burvel_PI = 0.0
 
