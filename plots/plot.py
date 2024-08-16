@@ -124,8 +124,8 @@ def plot_fields(check,comp,model_name):
     colors = bmap.mpl_colors
     # ---------------------------------------------------------------------------------------------------------------------------------
     # Titles
-    title_check = ['(a) Chl-a','(b) Oxygen','(c) Nitrate','(d) Phoshate','(e) PON','(f) NPP','(g) DIC']
-    title_comp = ['(h) Chl-a','(i) Oxygen','(j) Nitrate','(k) Phoshate','(l) PON','(m) NPP','(n) DIC']
+    title_check = ['(a) Chl-a','(b) Oxygen','(c) Nitrate','(d) Phosphate','(e) PON','(f) NPP','(g) DIC']
+    title_comp = ['(h) Chl-a','(i) Oxygen','(j) Nitrate','(k) Phosphate','(l) PON','(m) NPP','(n) DIC']
     title = ['(a) Chl-a','(b) Oxygen','(c) Nitrate','(d) Phoshate','(e) Chl-a','(f) Oxygen','(g) Nitrate','(h) Phoshate','(i) PON','(j) NPP','(k) DIC','(l) PON','(m) NPP','(n) DIC']
     # ---------------------------------------------------------------------------------------------------------------------------------
     # Colorbar Limits
