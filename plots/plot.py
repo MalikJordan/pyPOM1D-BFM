@@ -5,6 +5,7 @@ import matplotlib
 import netCDF4 as nc
 import numpy as np
 import os
+import colormaps as cmaps
 
 def force_aspect(ax,aspect=1):
     """Force plot aspects."""
@@ -138,7 +139,7 @@ def plot_fields(check,comp,model_name):
     fig,axes = plt.subplots(4,4,figsize=[16,15])
     for i in range(0,7):
         plt.subplot(4,4,i+1)
-        plt.imshow(check[i,:,:],extent=[0,12,150,0],aspect='auto',cmap='jet')
+        plt.imshow(check[i,:,:],extent=[0,12,150,0],aspect='auto',cmap=cmaps.viridis)
         ax = plt.gca()
         plt.xticks([0.5,2.5,4.5,6.5,8.5,10.5], ['J','M','M','J','S','N'])
         plt.xlabel('Month',fontsize=14)
@@ -155,7 +156,7 @@ def plot_fields(check,comp,model_name):
 
     for i in range(7,14):
         plt.subplot(4,4,i+2)
-        plt.imshow(comp[i-7,:,:],extent=[0,12,150,0],aspect='auto',cmap='jet')
+        plt.imshow(comp[i-7,:,:],extent=[0,12,150,0],aspect='auto',cmap=cmaps.viridis)
         ax = plt.gca()
         plt.xticks([0.5,2.5,4.5,6.5,8.5,10.5], ['J','M','M','J','S','N'])
         plt.xlabel('Month',fontsize=14)
