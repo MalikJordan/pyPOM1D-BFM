@@ -46,7 +46,7 @@ elif pom_bfm_parameters.ihotst == 1:
     # get_rst()
     pass
 
-REDUCE_BFM = True
+REDUCE_BFM = False
 if not pom_bfm_parameters.pom_only:
     # Initialize BFM
     d3state,d3stateb = initialize_bfm_in_pom(vertical_grid)

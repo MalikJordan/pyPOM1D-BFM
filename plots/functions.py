@@ -89,7 +89,9 @@ def plot_bfm1(check,comp,model_name):
     plt.xlabel('Month',fontsize=14)
     plt.xticks([0.5,2.5,4.5,6.5,8.5,10.5], ['J','M','M','J','S','N'])
     plt.yticks([0,50,100,150],[])
-    plt.colorbar(orientation='vertical')
+    cbar = plt.colorbar(orientation='vertical')
+    cbar.ax.get_yaxis().labelpad = 25
+    cbar.ax.set_ylabel('mmol O m$^{-3}$', fontsize=14, rotation=270)
     plt.clim(clow,chigh)
     force_aspect(ax,aspect=1)
 
