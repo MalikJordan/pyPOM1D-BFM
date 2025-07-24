@@ -183,19 +183,24 @@ def load_python_data_15yr(model_name):
     return avg_data_python, data_python
 
 
-def nrmse(check,comp):
+def nrmse(check,comp,type):
     """Calculate normalized root mean square error.
-    Root mean square error normalized by the difference between maximum and minimum concentration of the check field."""
+    Root mean square error normalized by the mean concentration of the check field."""
 
     avg = np.zeros(7)
     dif = np.zeros(7)
     rms = np.zeros(7)
+    std = np.zeros(7)
+
     for i in range(0,7):
         avg[i] = np.abs(np.mean(check[i,:,:]))
         dif[i] = np.max(check[i,:,:]) - np.min(check[i,:,:])
         rms[i] = np.power( np.mean( np.power( check[i,:,:]-comp[i,:,:], 2 ) )   ,0.5)
-    nrmse = 100*rms/avg    
-    # nrmse = 100*rms/dif
+        std[i] = np.std(check[i,:,:])
+    
+    if type == "avg":      nrmse = 100*rms/avg    
+    elif type == "dif":    nrmse = 100*rms/dif
+    elif type == "std":    nrmse = 100*rms/std
 
     return nrmse
 

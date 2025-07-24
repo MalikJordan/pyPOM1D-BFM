@@ -14,7 +14,7 @@ bfm17, bfm17_daily = load_fortran_data_bfm17(bfm17_data)
 bfm50, bfm50_daily = load_fortran_data(bfm50_data)
 # ---------------------------------------------------------------------------------------------------------------------------------
 # NRMSE
-nrmse_pyPOM23 = nrmse(pyPOM50,pyPOM23)
+nrmse_pyPOM23 = nrmse(pyPOM50,pyPOM23,'std')
 species = ['Chl-a','Oxygen','Nitrate','Phosphate','PON','NPP','DIC']
 print()
 print('NRMSE (%) - pyPOM23 vs pyPOM50')

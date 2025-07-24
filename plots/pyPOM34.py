@@ -10,7 +10,7 @@ pyPOM50, pyPOM50_daily = load_python_data(full_model)
 
 # ---------------------------------------------------------------------------------------------------------------------------------
 # NRMSE
-nrmse_pyPOM34 = nrmse(pyPOM50,pyPOM34)
+nrmse_pyPOM34 = nrmse(pyPOM50,pyPOM34,'std')
 species = ['Chl-a','Oxygen','Nitrate','Phosphate','PON','NPP','DIC']
 print('NRMSE (%) - pyPOM34 vs pyPOM50')
 for i in range(0,7):
