@@ -15,6 +15,122 @@ def force_aspect(ax,aspect=1):
     ax.set_aspect(abs((extent[1]-extent[0])/(extent[3]-extent[2]))/aspect)
 
 
+def load_fortran_data(model_name):
+    """Load fortran bfm56-pom1d data."""
+
+    path = os.getcwd() + '/model_data/' + model_name + '.nc'
+    variables = nc.Dataset(path)
+    variables = variables.variables
+
+    # Extract fields of interest
+    chlorophyll = variables['Chla'][:]
+    oxygen = variables['O2o'][:]
+    nitrate = variables['N3n'][:]
+    phosphate = variables['N1p'][:]
+    # pon = variables['P1n'][:] + variables['P2n'][:] + variables['P3n'][:] + variables['P4n'][:] + variables['Z3n'][:] + variables['Z4n'][:] + variables['Z5n'][:] + variables['Z6n'][:] \
+    #     + variables['R1n'][:] + variables['R6n'][:]
+    pon = variables['R6n'][:] + variables['P1n'][:] + variables['P2n'][:] + variables['P3n'][:] + variables['P4n'][:]
+    production = (variables['ruPTc'][:] - variables['resPP'][:] - variables['resZT'][:])/12
+    dic = (variables['DIC'][:])*(variables['ERHO'][:])*(12/1000)
+
+    # Write as array
+    chlorophyll = np.asarray(chlorophyll)
+    oxygen = np.asarray(oxygen)
+    nitrate = np.asarray(nitrate)
+    phosphate = np.asarray(phosphate)
+    pon = np.asarray(pon)
+    production = np.asarray(production)
+    dic = np.asarray(dic)
+
+    # Transpose array
+    chlorophyll = chlorophyll.transpose()
+    oxygen = oxygen.transpose()
+    nitrate = nitrate.transpose()
+    phosphate = phosphate.transpose()
+    pon = pon.transpose()
+    production = production.transpose()
+    dic = dic.transpose()
+
+    # Load data into matrix
+    data_fortran = np.zeros((7,chlorophyll.shape[0],chlorophyll.shape[1]))
+    data_fortran[0,:,:] = chlorophyll
+    data_fortran[1,:,:] = oxygen
+    data_fortran[2,:,:] = nitrate
+    data_fortran[3,:,:] = phosphate
+    data_fortran[4,:,:] = pon
+    data_fortran[5,:,:] = production
+    data_fortran[6,:,:] = dic
+
+    # Calculate monthly averages for year 2 of simulation
+    avg_data_fortran = np.zeros((7,150,12))
+    for spec in range(0,7):
+        for year in range(1,2):
+        # for year in range(14,15):
+            for month in range(0,12):
+                for day in range(0,30):
+                    avg_data_fortran[spec,:,month] = avg_data_fortran[spec,:,month] + data_fortran[spec,:,(day + (month*30) + (year*360))]
+    avg_data_fortran = avg_data_fortran/30
+
+    return avg_data_fortran, data_fortran
+
+
+def load_fortran_data_bfm17(model_name):
+    """Load fortran bfm56-pom1d data."""
+
+    path = os.getcwd() + '/model_data/' + model_name + '.nc'
+    variables = nc.Dataset(path)
+    variables = variables.variables
+
+    # Extract fields of interest
+    chlorophyll = variables['Chla'][:]
+    oxygen = variables['O2o'][:]
+    nitrate = variables['N3n'][:]
+    phosphate = variables['N1p'][:]
+    pon = variables['R6n'][:] + variables['P2n'][:]
+    production = (variables['ruPTc'][:] - variables['resPP'][:] - variables['resZT'][:])/12
+    dic = (variables['DIC'][:])*(variables['ERHO'][:])*(12/1000)
+
+    # Write as array
+    chlorophyll = np.asarray(chlorophyll)
+    oxygen = np.asarray(oxygen)
+    nitrate = np.asarray(nitrate)
+    phosphate = np.asarray(phosphate)
+    pon = np.asarray(pon)
+    production = np.asarray(production)
+    dic = np.asarray(dic)
+
+    # Transpose array
+    chlorophyll = chlorophyll.transpose()
+    oxygen = oxygen.transpose()
+    nitrate = nitrate.transpose()
+    phosphate = phosphate.transpose()
+    pon = pon.transpose()
+    production = production.transpose()
+    dic = dic.transpose()
+
+    # Load data into matrix
+    data_fortran = np.zeros((7,chlorophyll.shape[0],chlorophyll.shape[1]))
+    data_fortran[0,:,:] = chlorophyll
+    data_fortran[1,:,:] = oxygen
+    data_fortran[2,:,:] = nitrate
+    data_fortran[3,:,:] = phosphate
+    data_fortran[4,:,:] = pon
+    data_fortran[5,:,:] = production
+    data_fortran[6,:,:] = dic
+
+    # Calculate monthly averages for year 2 of simulation
+    avg_data_fortran = np.zeros((7,150,12))
+    for spec in range(0,7):
+        for year in range(1,2):
+        # for year in range(14,15):
+            for month in range(0,12):
+                for day in range(0,30):
+                    avg_data_fortran[spec,:,month] = avg_data_fortran[spec,:,month] + data_fortran[spec,:,(day + (month*30) + (year*360))]
+    avg_data_fortran = avg_data_fortran/30
+
+    return avg_data_fortran, data_fortran
+
+
 def load_python_data(model_name):
     """Load data from model of interest. Input model name as string."""
 
@@ -29,6 +145,42 @@ def load_python_data(model_name):
     end = start + 12
     conc_month = conc_month[:,:,start:end]
     return conc_month, conc_day
+
+
+def load_python_data_15yr(model_name):
+    """Load data from model of interest. Input model name as string."""
+
+    path = os.getcwd() + '/model_data/' + model_name + '.npz'
+    model = np.load(path,allow_pickle=True)
+
+    concentration = model['conc']
+    chlorophyll = model['chl']
+    production = model['npp']
+
+    # Load data into matrix
+    # data_python = np.zeros((7,150,730))
+    data_python = np.zeros((7,chlorophyll.shape[0],chlorophyll.shape[1]))
+    data_python[0,:,:] = chlorophyll   # Chlorophyll-a
+    data_python[1,:,:] = concentration[:,0,:]  # Oxygen
+    data_python[2,:,:] = concentration[:,2,:]  # Nitrate
+    data_python[3,:,:] = concentration[:,1,:]  # Phosphate
+    # data_python[4,:,:] = concentration[:,11,:] + concentration[:,16,:] + concentration[:,20,:] + concentration[:,24,:] + concentration[:,28,:] \
+    #                 + concentration[:,31,:] + concentration[:,34,:] + concentration[:,37,:] + concentration[:,40,:] + concentration[:,45,:] # Particulate Organic Nitrogen
+    data_python[4,:,:] = concentration[:,45,:] + concentration[:,11,:] + concentration[:,16,:] + concentration[:,20,:] + concentration[:,24,:]
+    data_python[5,:,:] = production    # Net Primary Production
+    data_python[6,:,:] = concentration[:,48,:] # Dissolved Inorganic Carbon
+
+    # Calculate monthly averages for year 2 of simulation
+    avg_data_python = np.zeros((7,150,12))
+    for spec in range(0,7):
+        for year in range(1,2):
+        # for year in range(14,15):
+            for month in range(0,12):
+                for day in range(0,30):
+                    avg_data_python[spec,:,month] = avg_data_python[spec,:,month] + data_python[spec,:,(day + (month*30) + (year*360))]
+    avg_data_python = avg_data_python/30
+
+    return avg_data_python, data_python
 
 
 def nrmse(check,comp):
@@ -46,6 +198,182 @@ def nrmse(check,comp):
     # nrmse = 100*rms/dif
 
     return nrmse
+
+
+def line_plots(check,comp):
+    
+    plt.rc('font', family='serif', size=16)
+    plt.rc('xtick', labelsize=10)
+    plt.rc('ytick', labelsize=10)
+
+    iters = check.shape[2]
+    x = np.linspace(0,iters-1,iters)
+    # Chl-a
+    depth = [0,29,59,89,119,149]
+    tit = ['0m','30m','60m','90m','120m','150m']
+    plot_titles = ['(a)','(b)','(c)','(d)','(e)','(f)']
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[0,depth[i],:],'-')
+        plt.plot(x,comp[0,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+        # plt.legend(['Python','Fortran'])
+    
+    # plt.suptitle('Chlorophyll-a')
+    plt.tight_layout()
+    fig_name = 'chl_line_plots.jpg'
+    plt.savefig(fig_name)
+    
+    # Oxygen
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[1,depth[i],:],'-')
+        plt.plot(x,comp[1,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Oxygen')
+    plt.tight_layout()
+    fig_name = 'o2o_line_plots.jpg'
+    plt.savefig(fig_name)
+
+    # Nitrate
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[2,depth[i],:],'-')
+        plt.plot(x,comp[2,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Nitrate')
+    plt.tight_layout()
+    fig_name = 'n3n_line_plots.jpg'
+    plt.savefig(fig_name)
+
+    # Phosphate
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[3,depth[i],:],'-')
+        plt.plot(x,comp[3,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Phosphate')
+    plt.tight_layout()
+    fig_name = 'n1p_line_plots.jpg'
+    plt.savefig(fig_name)
+
+    # PON
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[4,depth[i],:],'-')
+        plt.plot(x,comp[4,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Particulate Organic Nitrogen')
+    plt.tight_layout()
+    fig_name = 'pon_line_plots.jpg'
+    plt.savefig(fig_name)
+
+    # NPP
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[5,depth[i],:],'-')
+        plt.plot(x,comp[5,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Net Primary Production')
+    plt.tight_layout()
+    fig_name = 'npp_line_plots.jpg'
+    plt.savefig(fig_name)
+
+    # DIC
+    fig,axes = plt.subplots(2,3,figsize=[20,10])
+    for i in range(0,6):
+        plt.subplot(2,3,i+1)
+        plt.plot(x,check[6,depth[i],:],'-')
+        plt.plot(x,comp[6,depth[i],:],':')
+        ax = plt.gca()
+        plt.title(plot_titles[i])
+        plt.grid(linestyle = '--', linewidth = 0.5)
+        if i<3:
+            plt.xlabel('')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['','','','','','','','','','','','','','',''])
+        else:
+            plt.xlabel('Year')
+            plt.xticks([360,720,1080,1440,1800,2160,2520,2880,3240,3600,3960,4320,4680,5040,5400],['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'])
+        
+        plt.xlim(0,iters)
+
+    # plt.suptitle('Dissolved Inorganic Carbon')
+    plt.tight_layout()
+    fig_name = 'o3c_line_plots.jpg'
+    plt.savefig(fig_name)
+
+
 
 
 def plot_bfm1(check,comp,model_name):
