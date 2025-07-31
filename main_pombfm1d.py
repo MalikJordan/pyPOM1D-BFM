@@ -81,7 +81,6 @@ if not pom_bfm_parameters.pom_only:
 
     else: # Preset bfm (full or reduced)
         if PRESET == "bfm50":
-            multiplier = np.ones(d3state.shape[1])
             species_removed = {}
         elif PRESET == "bfm1":
             species_removed = {'O2o': 0}
