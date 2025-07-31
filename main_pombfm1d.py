@@ -48,6 +48,7 @@ elif pom_bfm_parameters.ihotst == 1:
     pass
 
 REDUCE_BFM = True
+PRESET = "bfm50"    # Available presets: bfm1, bfm23, bfm34, bfm35, bfm36, bfm50
 if not pom_bfm_parameters.pom_only:
     # Initialize BFM
     d3state,d3stateb = initialize_bfm_in_pom(vertical_grid)
@@ -79,10 +80,60 @@ if not pom_bfm_parameters.pom_only:
         d3state, d3stateb, species = remove_species(d3state,d3stateb,species_names,species_removed)
         include = included_species(species)
 
-    else: # BFM50
-        # Include all species in original BFM50
-        include = included_species(species_names)
-        species = species_names
+    else: # Preset bfm (full or reduced)
+        if PRESET == "bfm50":
+            species_removed = {}
+        elif PRESET == "bfm1":
+            species_removed = {'O2o': 0}
+        elif PRESET == "bfm23":
+            species_removed = {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 
+                               'B1c': 7, 'B1n': 8, 'B1p': 9, 
+                               'P1l': 13, 
+                               'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 
+                               'P3l': 22, 
+                               'P4l': 26, 
+                               'Z5c': 33, 'Z5p': 35, 
+                               'R1c': 39, 'R1n': 40, 'R1p': 41, 
+                               'R6c': 44, 'R6n': 45, 'R6p': 46, 
+                               'O3c': 48}
+        elif PRESET == "bfm34":
+            species_removed = {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 
+                               'B1c': 7, 'B1n': 8, 'B1p': 9, 
+                               'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 
+                               'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18, 
+                               'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 
+                               'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 
+                               'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 
+                               'Z6c': 36, 'Z6p': 38, 
+                               'R1c': 39, 'R1n': 40, 'R1p': 41, 
+                               'R6c': 44, 'R6n': 45, 'R6p': 46}
+        elif PRESET == "bfm35":
+            species_removed = {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 
+                               'B1c': 7, 'B1n': 8, 'B1p': 9, 
+                               'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 
+                               'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18,
+                               'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 
+                               'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 
+                               'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 
+                               'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 
+                               'R1c': 39, 'R1n': 40, 'R1p': 41, 
+                               'R6c': 44, 'R6n': 45, 'R6p': 46}
+        elif PRESET == "bfm36":
+            species_removed = {'O2o': 0, 'N1p': 1, 'N3n': 2, 'N4n': 3, 
+                               'B1c': 7, 'B1n': 8, 'B1p': 9, 
+                               'P1c': 10, 'P1n': 11, 'P1p': 12, 'P1l': 13, 
+                               'P2c': 15, 'P2n': 16, 'P2p': 17, 'P2l': 18,
+                               'P3c': 19, 'P3n': 20, 'P3p': 21, 'P3l': 22, 
+                               'P4c': 23, 'P4n': 24, 'P4p': 25, 'P4l': 26, 
+                               'Z5c': 33, 'Z5n': 34, 'Z5p': 35, 
+                               'Z6c': 36, 'Z6n': 37, 'Z6p': 38, 
+                               'R1c': 39, 'R1n': 40, 'R1p': 41, 
+                               'R6c': 44, 'R6n': 45, 'R6p': 46, 
+                               'O3c': 48}
+            
+        d3state, d3stateb, species = remove_species(d3state,d3stateb,species_names,species_removed)
+        include = included_species(species)
+
 else:
     bfm_phys_vars = BfmPhysicalVariables()
 
