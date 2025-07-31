@@ -83,36 +83,36 @@ def modified_DRGEP(conc,bfm_phys_vars):
     Description: Apply Modififed DRGEP reduction strategy to BFM.
                  Target and safe species for each error function listed below.
     --------------------------------------------------------------------------------------------------------------
-    Error Function  |   Target Species                          |   Safe Species
+    Error Function             |   Target Species                          |   Safe Species
     --------------------------------------------------------------------------------------------------------------
-    lo_1            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_2            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_3            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_4            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_5            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_6            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_7            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_8            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    lo_9            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_1            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_2            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_3            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_4            |   ['P1l', 'P2l', 'P3l', 'P4l']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_5            |   ['P2l', 'P3l', 'P4l']                   |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_6            |   ['P3l', 'P4l']                          |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_7            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_8            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_lo_9            |   ['P1c', 'P2c', 'P3c', 'P4c']            |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     --------------------------------------------------------------------------------------------------------------
-    dic_1           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    dic_2           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    dic_3           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    dic_4           |   ['O3c']                                 |   ['N3n', 'N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_dic_1           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_dic_2           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_dic_3           |   ['O3c']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_dic_4           |   ['O3c']                                 |   ['N3n', 'N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     --------------------------------------------------------------------------------------------------------------
-    pon_1           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    pon_2           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    pon_3           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_pon_1           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_pon_2           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_pon_3           |   ['P1n', 'P2n', 'P3n', 'P4n', 'R6n']     |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     --------------------------------------------------------------------------------------------------------------
-    oxy_1           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    oxy_2           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    oxy_3           |   ['O2o']                                 |   []
-    oxy_4           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_oxy_1           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_oxy_2           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_oxy_3           |   ['O2o']                                 |   []
+    calc_error_oxy_4           |   ['O2o']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     --------------------------------------------------------------------------------------------------------------
-    in_1            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    in_2            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    in_3            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
-    in_4            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_in_1            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_in_2            |   ['N1p']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_in_3            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
+    calc_error_in_4            |   ['N3n']                                 |   ['N4n', 'P1l', 'P2l', 'P3l', 'P4l']
     --------------------------------------------------------------------------------------------------------------
     """
     # Information for reduction
