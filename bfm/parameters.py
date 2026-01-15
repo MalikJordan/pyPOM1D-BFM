@@ -219,7 +219,8 @@ class OxygenReaeration:
 class PelChem:
     def __init__(self):
         self.calc_alkalinity = False
-        self.calc_bacteria = True
+        # self.calc_bacteria = True
+        self.calc_bacteria = False
         self.h_o = 10.0
         self.h_r = 1.0
         self.lambda_N3denit = 0.35
@@ -417,7 +418,8 @@ class ZooAvailability:
         self.del_z5p2 = 1.0
         self.del_z5p3 = 0.5
         self.del_z5p4 = 0.0
-        self.del_z5z5 = 1.0
+        # self.del_z5z5 = 1.0
+        self.del_z5z5 = 0.0
         self.del_z5z6 = 0.8
         self.del_z6b1 = 1.0
         self.del_z6p1 = 0.0
