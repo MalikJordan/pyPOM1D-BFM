@@ -3,6 +3,7 @@ import sys
 from bfm.bfm50.Functions.other_functions import insw_vector, eTq_vector, get_concentration_ratio
 from bfm.parameters import Phyto1, Phyto2, Phyto3, Phyto4
 from pom.parameters import PomBfm
+np.set_printoptions(precision=20)
 
 phyto1_prameters = Phyto1()
 phyto2_prameters = Phyto2()

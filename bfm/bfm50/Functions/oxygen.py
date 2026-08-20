@@ -1,4 +1,5 @@
 import numpy as np
+np.set_printoptions(precision=20)
 def calculate_oxygen_reaeration(oxygen_reaeration_parameters, environmental_parameters, constant_parameters, d3state, del_z, temper, salt, wind, o2o):
     """ calculates the oxygen reaeration between air and water column, 
     as forced by temperature and wind.

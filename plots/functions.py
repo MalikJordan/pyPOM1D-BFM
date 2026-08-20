@@ -6,6 +6,7 @@ import netCDF4 as nc
 import numpy as np
 import os
 import colormaps as cmaps
+np.set_printoptions(precision=20)
 
 def force_aspect(ax,aspect=1):
     """Force plot aspects."""

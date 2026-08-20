@@ -8,15 +8,23 @@ def density_profile(pom_bfm_parameters,temperature,salinity,vertical_grid):
 
     pressure = -gravity * 1.025 * vertical_grid.vertical_spacing_staggered[:-1] * pom_bfm_parameters.h * 0.01
 
-    cr = 1449.1 + (0.0821*pressure) + (4.55*temperature.backward[:-1]) - (0.045*np.power(temperature.backward[:-1],2)) + (1.34*(salinity.backward[:-1] - 35.0))
+    # cr = 1449.1 + (0.0821*pressure) + (4.55*temperature.backward[:-1]) - (0.045*np.power(temperature.backward[:-1],2)) + (1.34*(salinity.backward[:-1] - 35.0))
+    cr = 1449.1 + (0.0821*pressure) + (4.55*temperature.current[:-1]) - (0.045*np.power(temperature.current[:-1],2)) + (1.34*(salinity.current[:-1] - 35.0))
     cr = pressure/np.power(cr,2)
     
-    density = 999.842594 + (6.793952e-02*temperature.backward[:-1]) - (9.095290e-03*np.power(temperature.backward[:-1],2)) \
-            + (1.001685e-04*np.power(temperature.backward[:-1],3)) - (1.120083e-06*np.power(temperature.backward[:-1],4)) + (6.536332e-09*np.power(temperature.backward[:-1],5)) \
-            + (0.824493 - (4.0899e-03*temperature.backward[:-1]) + (7.6438e-05*np.power(temperature.backward[:-1],2))
-                    - (8.2467e-07*np.power(temperature.backward[:-1],3)) + (5.3875e-09*np.power(temperature.backward[:-1],4))) * salinity.backward[:-1] \
-            + (-5.72466e-03 + 1.0227e-04*temperature.backward[:-1] - (1.6546e-06*np.power(temperature.backward[:-1],2))) * (np.power(np.abs(salinity.backward[:-1]),1.5)) \
-                    + (4.8314e-04*np.power(salinity.backward[:-1],2)) + 1.0e05*cr*(1.0 - (2*cr))
+    # density = 999.842594 + (6.793952e-02*temperature.backward[:-1]) - (9.095290e-03*np.power(temperature.backward[:-1],2)) \
+    #         + (1.001685e-04*np.power(temperature.backward[:-1],3)) - (1.120083e-06*np.power(temperature.backward[:-1],4)) + (6.536332e-09*np.power(temperature.backward[:-1],5)) \
+    #         + (0.824493 - (4.0899e-03*temperature.backward[:-1]) + (7.6438e-05*np.power(temperature.backward[:-1],2))
+    #                 - (8.2467e-07*np.power(temperature.backward[:-1],3)) + (5.3875e-09*np.power(temperature.backward[:-1],4))) * salinity.backward[:-1] \
+    #         + (-5.72466e-03 + 1.0227e-04*temperature.backward[:-1] - (1.6546e-06*np.power(temperature.backward[:-1],2))) * (np.power(np.abs(salinity.backward[:-1]),1.5)) \
+    #                 + (4.8314e-04*np.power(salinity.backward[:-1],2)) + 1.0e05*cr*(1.0 - (2*cr))
+
+    density = 999.842594 + (6.793952e-02*temperature.current[:-1]) - (9.095290e-03*np.power(temperature.current[:-1],2)) \
+            + (1.001685e-04*np.power(temperature.current[:-1],3)) - (1.120083e-06*np.power(temperature.current[:-1],4)) + (6.536332e-09*np.power(temperature.current[:-1],5)) \
+            + (0.824493 - (4.0899e-03*temperature.current[:-1]) + (7.6438e-05*np.power(temperature.current[:-1],2))
+                    - (8.2467e-07*np.power(temperature.current[:-1],3)) + (5.3875e-09*np.power(temperature.current[:-1],4))) * salinity.current[:-1] \
+            + (-5.72466e-03 + 1.0227e-04*temperature.current[:-1] - (1.6546e-06*np.power(temperature.current[:-1],2))) * (np.power(np.abs(salinity.current[:-1]),1.5)) \
+                    + (4.8314e-04*np.power(salinity.current[:-1],2)) # + 1.0e05*cr*(1.0 - (2*cr))
     
     vertical_density_profile[:-1] = (density - 1000.) * 1.e-03
     vertical_density_profile[-1] = vertical_density_profile[-2]

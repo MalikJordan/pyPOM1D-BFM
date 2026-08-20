@@ -1,5 +1,6 @@
 import numpy as np
 from bfm.bfm50.Functions.other_functions import eTq_vector, get_concentration_ratio, insw_vector
+np.set_printoptions(precision=20)
 
 def bacteria_eqns(d3state, bacteria_parameters, constant_parameters, environmental_parameters, temper,
                   o2o, n1p, n4n, b1c, b1n, b1p, r1c, r1n, r1p, r2c, r3c, r6c, r6n, r6p):

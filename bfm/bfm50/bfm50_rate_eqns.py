@@ -12,6 +12,7 @@ from bfm.bfm50.Functions.other_functions import insw_vector, get_concentration_r
 from bfm.parameters import Bacteria, Co2Flux, Constants, Environment, MesoZoo3, MesoZoo4, MicroZoo5, MicroZoo6, \
                            OxygenReaeration,  PelChem, Phyto1, Phyto2, Phyto3, Phyto4, ZooAvailability
 from bfm.bfm50.state_variables import bfm_rates, state_vars
+np.set_printoptions(precision=20)
 
 bacteria_parameters = Bacteria()
 constant_parameters = Constants()

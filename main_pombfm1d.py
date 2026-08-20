@@ -12,6 +12,7 @@ from pom_bfm.coupling import light_distribution, pom_bfm_1d, pom_to_bfm, vertica
 from pom_bfm.initialization import initialize_bfm_in_pom
 from reduction.included_species import included_species, remove_species
 from reduction.modified_DRGEP import modified_DRGEP
+np.set_printoptions(precision=20)
 
 current_path = os.getcwd()
 

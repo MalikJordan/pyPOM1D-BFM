@@ -1,5 +1,6 @@
 import numpy as np
 from bfm.bfm50.Functions.other_functions import eTq_vector, get_concentration_ratio
+np.set_printoptions(precision=20)
 
 def mesozoo_eqns(d3state, mesozoo_parameters, constant_parameters, environmental_parameters, zc, zn, zp, i_c, i_n, i_p, temp, o2o):
     """ Calculates the mesozooplankton (Z3 & Z4) terms needed for the zooplankton biological rate equations

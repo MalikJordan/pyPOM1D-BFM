@@ -71,8 +71,10 @@ class Bacteria:
         self.r_0B = 8.38
         self.v_0B_r1 = 0.0
         self.v_B_c = 1.0
-        self.v_B_n = 1.0
-        self.v_B_p = 1.0
+        # self.v_B_n = 1.0
+        # self.v_B_p = 1.0
+        self.v_B_n = 0.
+        self.v_B_p = 0.
         self.v_B_r1 = 0.3
         self.v_B_r2 = 0.0
         self.v_B_r3 = 0.0
@@ -185,8 +187,10 @@ class MicroZoo5:
         self.etaZ = 0.5
         self.h_Z_F = 200.0
         self.mu_z = 50.0
-        self.n_Zopt = 0.0128
-        self.p_Zopt = 0.00185
+        # self.n_Zopt = 0.0128
+        # self.p_Zopt = 0.00185
+        self.n_Zopt = 0.01258
+        self.p_Zopt = 7.862e-04
         self.r_Z0 = 2.0
         self.z_o2o = 0.5
 
@@ -200,8 +204,10 @@ class MicroZoo6:
         self.etaZ = 0.3
         self.h_Z_F = 200.0
         self.mu_z = 50.0
-        self.n_Zopt = 0.0128
-        self.p_Zopt = 0.00185
+        # self.n_Zopt = 0.0128
+        # self.p_Zopt = 0.00185
+        self.n_Zopt = 0.01258
+        self.p_Zopt = 7.862e-04
         self.r_Z0 = 5.0
         self.z_o2o = 0.5
 
@@ -219,8 +225,8 @@ class OxygenReaeration:
 class PelChem:
     def __init__(self):
         self.calc_alkalinity = False
-        # self.calc_bacteria = True
-        self.calc_bacteria = False
+        self.calc_bacteria = True
+        # self.calc_bacteria = False
         self.h_o = 10.0
         self.h_r = 1.0
         self.lambda_N3denit = 0.35
@@ -261,11 +267,16 @@ class Phyto1:
         self.phi_Nmax = 0.0126
         self.phi_Nmin = 6.87e-03
         self.phi_Nopt = 0.0126
-        self.phi_Pmax = 0.001572
+        # self.phi_Pmax = 0.001572
+        # self.phi_Pmin = 4.29e-04
+        # self.phi_Popt = 0.000786
+        self.phi_Pmax = 7.86e-04
         self.phi_Pmin = 4.29e-04
         self.phi_Popt = 0.000786
-        self.phi_Smin = 0.0
-        self.phi_Sopt = 0.01
+        # self.phi_Smin = 0.0
+        # self.phi_Sopt = 0.01
+        self.phi_Smin = 4.5e-03
+        self.phi_Sopt = 8.5e-03
         self.rP0 = 2.5
         self.rho_Ps = 0.0
         self.si_switch = 1
@@ -343,7 +354,10 @@ class Phyto3:
         self.phi_Nmax = 0.0126
         self.phi_Nmin = 6.87e-03
         self.phi_Nopt = 0.0126
-        self.phi_Pmax = 0.001572
+        # self.phi_Pmax = 0.001572
+        # self.phi_Pmin = 4.29e-04
+        # self.phi_Popt = 0.000786
+        self.phi_Pmax = 0.000786
         self.phi_Pmin = 4.29e-04
         self.phi_Popt = 0.000786
         self.phi_Smin = 0.0
@@ -384,7 +398,10 @@ class Phyto4:
         self.phi_Nmax = 0.0126
         self.phi_Nmin = 6.87e-03
         self.phi_Nopt = 0.0126
-        self.phi_Pmax = 0.001572
+        # self.phi_Pmax = 0.001572
+        # self.phi_Pmin = 4.29e-04
+        # self.phi_Popt = 0.000786
+        self.phi_Pmax = 0.000786
         self.phi_Pmin = 4.29e-04
         self.phi_Popt = 0.000786
         self.phi_Smin = 0.0
@@ -418,8 +435,8 @@ class ZooAvailability:
         self.del_z5p2 = 1.0
         self.del_z5p3 = 0.5
         self.del_z5p4 = 0.0
-        # self.del_z5z5 = 1.0
-        self.del_z5z5 = 0.0
+        self.del_z5z5 = 1.0
+        # self.del_z5z5 = 0.0
         self.del_z5z6 = 0.8
         self.del_z6b1 = 1.0
         self.del_z6p1 = 0.0

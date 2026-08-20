@@ -1,4 +1,6 @@
+import numpy as np
 from bfm.bfm50.Functions.other_functions import eTq_vector, get_concentration_ratio
+np.set_printoptions(precision=20)
 
 def get_mesozoo_predation_terms(d3state, mesozoo3_parameters, mesozoo4_parameters, zoo_availability_parameters, environmental_parameters, constant_parameters, temp,
                                 p1c, p1n, p1p, p2c, p2n, p2p, p3c, p3n, p3p, p4c, p4n, p4p, z3c, z3n, z3p, z4c, z4n, z4p, z5c, z5n, z5p, z6c, z6n, z6p):
